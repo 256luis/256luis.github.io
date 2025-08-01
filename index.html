@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <a href="https://www.github.com/256luis">
+      <img id="github-mark" src="image/github-mark.png" href="">
+    </a>
+    <a href="https://www.linkedin.com/in/luismiguelbanez">
+      <img id="linkedin" src="image/inBug-Black.png">
+    </a>
+    <div id="name-card" class="container-x">
+      <img src="image/me.jfif" id="me-pic">
+      <div class="container-y" style="margin-left: 1%;">
+        <h1 id="name">Luis Miguel Banez</h1>
+        <h2 id="role">Software Developer Portfolio</h2>
+      </div>
+    </div>
+    <!-- # Luis Miguel Banez -->
+<!-- ##  -->
+<p>Hi! My name is Luis Miguel Banez. I have a passion for software engineering and programming in general.
+Within the software engineering field, I am particularly interested in embedded systems, compiler design, and computer graphics.
+I have made various hobby projects to hone my skills in programming. While I am comfortable in various programming languages such as Python and Java,
+I consider C programming to be my strongest skill. In this page, you will see the various projects I have created in my spare time.</p>
+<hr>
+<h3><a href="https://github.com/256luis/easy2d">Easy2D</a></h3>
+<p>Easy2D is a super simple, easy to use, software-rendered, graphics library. Other than drawing pixels to the screen,
+it also handles windowing, image loading, and mouse/keyboard input. I wrote everything from scratch, without any libraries other than
+the C standard library and the Win32 API (and stb_image).</p>
+<p><img src="image/stars.gif" alt="stars"></p>
+<hr>
+<h3><a href="https://github.com/256luis/octo">Octo</a></h3>
+<p>Octo is a modern, statically and strongly-typed programming language that transpiles to C code.
+It offers a clean syntax reminiscent of other high-level languages, supporting features like basic type inference, arrays, pointers, and user-defined structs and unions.
+The language is strict with types, disallowing implicit casts between signed and unsigned integers or between numeric and floating-point types, and only allowing implicit casting from smaller to larger numeric types.
+Octo also provides familiar control flow structures like if-statements, while-loops, and Python-like for-loops for iterating over arrays.</p>
+<pre><code>extern func printf(format: &amp;char, ..) -&gt; i32;
+
+func fib(n: i64) -&gt; i64
+{
+    if n == 0 return 0;
+    if n == 1 return 1;
+
+    return fib(n - 1) + fib(n - 2);
+}
+
+func main() -&gt; i32
+{
+    let n = 5;
+    let nth_fib = fib(n);
+    printf(&quot;fib(%d) = %d&quot;, n, nth_fib);
+}
+</code></pre>
+<hr>
+<h3><a href="https://github.com/256luis/lvec.c">lvec.c</a></h3>
+<p>A simple dynamic array library for C.
+It is generic, meaning it will work with any primitive or user-defined type.
+Like any dynamic array library, users can append, remove, and resize the array at will.</p>
+<pre><code class="language-c">#include &quot;lvec.h&quot;
+
+int main()
+{
+    int* nums = lvec_new(int);
+    if (nums == NULL)
+    {
+        // handle error
+        return 1;
+    }
+
+    lvec_append(nums, 10);
+    lvec_append(nums, 20);
+
+    // ...
+
+    lvec_free(nums);
+}
+</code></pre>
+
+  </body>
+</html>

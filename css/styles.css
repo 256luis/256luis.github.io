@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    padding-top: 1em;
+    width: min(50em, 90vw);
+    font-family: Montserrat;
+    background-color: #EDEEEB;
+    /* color: #DCD7BA; */
+    color: black;
+    position: relative;
+}
+
+p {
+    text-align: justify;
+}
+
+pre {
+    background-color: #222222;
+    color: white;
+    padding: 1em;
+}
+
+#me-pic {
+    height: 100%;
+    border-radius: 50%;
+}
+
+#name-card {
+    align-items: center;
+    /* width: 100%; */
+    height: 5em;
+    /* aspect-ratio: 100/15; */
+
+}
+
+#name {
+    margin: 0;
+    font-size: 2.3em;
+}
+
+#role {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.container-x {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: row;
+}
+
+.container-y {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+
+img[alt=stars] {
+    width: 100%;
+}
+
+#github-mark {
+    position: absolute;
+    width: 1.5em;
+    right: 0;
+    top: 1.2em;
+}
+
+#linkedin {
+    position: absolute;
+    width: 1.5em;
+    right: 2em;
+    top: 1.2em;
+}
