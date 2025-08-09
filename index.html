@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  <body>
+    <canvas id="stars"></canvas>
+    <script src="js/stars.js" type="module"></script>
+
+    <div id="intro-panel" class="panel">
+      <div id="intro" class="container-y">
+        <div id="card" class="container-x">
+          <div id="idpic" class="container-y">
+            <img src="res/me.jfif">
+          </div>
+
+          <div id="name" class="container-y">
+            <h1>Luis Miguel Ba&#0241ez</h1>
+            <h2 id="subtitle">Software Developer</h2>
+          </div>
+        </div>
+        <div class="nav">
+          <button id="about-button">about me</button>
+          <button id="projects-button">projects</button>
+          <button id="contact-button">contact</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="about-panel" class="panel">
+      <div id="about" class="container-y">
+        <div id="about-content">
+          <h1>Hi! I'm Luis. </h1>
+          <p>
+            I have a deep love for software engineering and programming in general.
+            Within the software engineering field, I am particularly interested in
+            embedded systems, compiler design, and computer graphics. I have made
+            various hobby projects to hone my skills in programming. I am a naturally curious person,
+            often wanting to learn about how things work under-the-hood. This led me to learn about
+            many  things, from rendering engines to compilers.
+          </p>
+
+          <hr/>
+
+          <h2>Experience</h2>
+          <div class="left-right">
+            <h3>Embedded Software Engineer Intern</h3>
+            <h3>Dyson Electronics (August - November 2023)</h3>
+          </div>
+          <span>
+            Implemented various features of an embedded systems product from scratch
+            across multiple microcontrollers.
+          </span>
+
+          <hr/>
+
+          <h2>Education</h2>
+          <div class="left-right">
+            <h3>BS Computer Science</h3>
+            <h3>Mapua University (2021-present)</h3>
+          </div>
+          <span>Specializing in Application Development</span>
+
+        </div>
+
+        <div id="about-back" class="nav container-x">
+          <button class="back">go back</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="contact-panel" class="panel">
+      <div id="contact" class="container-y">
+        <div id="info">
+          <div class="entry container-x">
+            <img src="res/Gmail_icon_(2020).svg">
+            <span>luismbanez@gmail.com</span>
+          </div>
+
+          <div class="entry container-x">
+            <img href="google.com"src="res/LI-In-Bug.png">
+            <a href="https://linkedin.com/in/luismiguelbanez" target="_blank">linkedin.com/in/luismiguelbanez</a>
+          </div>
+
+          <div class="entry container-x">
+            <img src="res/github-mark-white.svg">
+            <a href="https://github.com/256luis" target="_blank">github.com/256luis</a>
+          </div>
+
+          <div class="entry container-x">
+            <img src="res/telephone.png">
+            <span>+63 966 049 1805</span>
+          </div>
+        </div>
+        <div class="nav container-x">
+          <button class="back">go back</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="projects-panel" class="panel">
+      <div id="projects" class="container-y">
+        <div id="projects-content">
+          <h1>
+            <a href="https://github.com/256luis/easy2d" target="_blank">Easy2D&#x1F517</a>
+          </h1>
+          <p>
+            Easy2D is a super simple, easy to use, software-rendered, graphics
+            library. Other than drawing pixels to the screen, it also handles
+            windowing, image loading, and mouse/keyboard input. I wrote everything from
+            scratch, without any libraries other than the C standard library and the
+            Win32 API (and stb_image).
+          </p>
+          <img src="res/stars.gif">
+          <span class="img-desc">An application written with the Easy2D library.</span>
+
+          <hr/>
+
+          <h1>
+            <a href="https://github.com/256luis/octo" target="_blank">Octo&#x1F517</a>
+          </h1>
+          <p>
+            Octo is a modern, statically and strongly-typed programming language that
+            transpiles to C code. It offers a clean syntax reminiscent of other
+            high-level languages, supporting features like basic type inference,
+            arrays, pointers, and user-defined structs and unions. The language is
+            strict with types, disallowing implicit casts between signed and unsigned
+            integers or between numeric and floating-point types, and only allowing
+            implicit casting from smaller to larger numeric types. Octo also provides
+            familiar control flow structures like if-statements, while-loops, and
+            Python-like for-loops for iterating over arrays.
+          </p>
+          <pre><code>extern func printf(format: &char, ..) -> i32;
+
+func fib(n: i64) -> i64
+{
+    if n == 0 return 0;
+    if n == 1 return 1;
+
+    return fib(n - 1) + fib(n - 2);
+}
+
+func main() -> i32
+{
+    let n = 5;
+    let nth_fib = fib(n);
+    printf("fib(%d) = %d", n, nth_fib);
+}</code></pre>
+          <span class="img-desc">
+            An Octo program that calculates the nth fibonacci number.
+          </span>
+
+          <hr/>
+
+          <h1>
+            <a href="https://github.com/256luis/lvec.c" target="_blank">lvec.c&#x1F517</a>
+          </h1>
+          <p>
+            A simple dynamic array library for C. It is generic, meaning it will
+            work with any primitive or user-defined type. Like any dynamic array
+            library, users can append, remove, and resize the array at will.
+          </p>
+          <pre><code>#include "lvec.h"
+
+int main()
+{
+    int* nums = lvec_new(int);
+    if (nums == NULL)
+    {
+        // handle error
+        return 1;
+    }
+
+    lvec_append(nums, 10);
+    lvec_append(nums, 20);
+
+    // ...
+
+    lvec_free(nums);
+}</code></pre>
+          <span class="img-desc">
+            Example usage of the lvec.c library.
+          </span>
+        </div>
+
+        <div id="projects-back" class="nav container-x">
+          <button class="back">go back</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- </div> -->
+
+<script src="js/effects.js"></script>
+<script src="js/script.js" type="module"></script>
+</body>
+</html>

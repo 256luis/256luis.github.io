@@ -1,0 +1,24 @@
+<h2><a href=https://github.com/256luis/lvec.c>lvec.c</a></h2>
+<p>A simple dynamic array library for C. It is generic, meaning it will work with any
+primitive or user-defined type. Like any dynamic array library, users can append,
+remove, and resize the array at will.</p>
+<pre><code>#include &quot;lvec.h&quot;
+
+int main()
+{
+    int* nums = lvec_new(int);
+    if (nums == NULL)
+    {
+        // handle error
+        return 1;
+    }
+
+    lvec_append(nums, 10);
+    lvec_append(nums, 20);
+
+    // ...
+
+    lvec_free(nums);
+}
+</code></pre>
+

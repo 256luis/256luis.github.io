@@ -1,0 +1,28 @@
+<h2><a href=https://github.com/256luis/octo>Octo</a></h2>
+<p>Octo is a modern, statically and strongly-typed programming language that
+transpiles to C code. It offers a clean syntax reminiscent of other
+high-level languages, supporting features like basic type inference,
+arrays, pointers, and user-defined structs and unions. The language is
+strict with types, disallowing implicit casts between signed and unsigned
+integers or between numeric and floating-point types, and only allowing
+implicit casting from smaller to larger numeric types. Octo also provides
+familiar control flow structures like if-statements, while-loops, and
+Python-like for-loops for iterating over arrays.</p>
+<pre><code>extern func printf(format: &amp;char, ..) -&gt; i32;
+
+func fib(n: i64) -&gt; i64
+{
+    if n == 0 return 0;
+    if n == 1 return 1;
+
+    return fib(n - 1) + fib(n - 2);
+}
+
+func main() -&gt; i32
+{
+    let n = 5;
+    let nth_fib = fib(n);
+    printf(&quot;fib(%d) = %d&quot;, n, nth_fib);
+}
+</code></pre>
+
